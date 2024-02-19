@@ -1,11 +1,10 @@
 import React from 'react'
 import Card from '../card/Card';
-import movie from '../../assets/movieProject.png'
-import tecnoTienda from '../../assets/tecnoTienda.png'
+import { proyectos } from './proyectos';
+
 const Proyectos = () => {
   return (
     <>
-
     <div className="text-center">
         <a
           className="btn w-100 border-0"
@@ -21,14 +20,13 @@ const Proyectos = () => {
       <div className="collapse" id="collapseExample1">
         <div className="card card-body">
           <div className="row ">
-            <div className="col-6 mt-1 ">
-              <Card img={movie}/>
+          {proyectos.map((proyecto) => (
+            <div key={proyecto.titulo} className="col-4 mt-1 ">
+              <Card desc={proyecto.descripcion} title={proyecto.titulo} linkWeb={proyecto.link} linkAgitHub={proyecto.git}/>
             </div>
-            <div className="col-6 mt-1 ">
-              <Card img={tecnoTienda}/>
-            </div>
+          ))}
           </div>
-        </div>
+      </div>
       </div>
     </>
   )

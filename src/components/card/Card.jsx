@@ -1,15 +1,16 @@
 import React from 'react'
-const card = ( {img,title,description} ) => {
+
+
+const card = ( {desc, title, linkWeb, linkAgitHub} ) => {
   return (
-    <div className="d-flex h-100">
+    <div className="d-flex h-100 w-100">
       <div className="card border-dark">
-        <img src={img} className="card-img-top h-100" alt="projectImg" />
         <div className="card-body text-center">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}'s content.</p>         
+          <p className="card-text">{desc}</p>
         </div>
-        <a href="{linkWeb}" className="btn btn-primary m-1">Ir al proyecto</a>
-        <a href="{linkAgitHub}" className="btn btn-primary m-1">Ver el codigo</a>
+        <a href={linkWeb} className="btn btn-primary m-1" target="_blank">Ir al proyecto</a>
+        <a href={linkAgitHub} className="btn btn-primary m-1" target="_blank">Ver el codigo</a>
       </div>
     </div>
   )

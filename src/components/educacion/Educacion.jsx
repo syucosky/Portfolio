@@ -26,7 +26,7 @@ const Educacion = () => {
               </li>
               <li>
                 <p>
-                  <b>Aceleración Sofftek(Java Backend)</b><br></br>
+                  <b>Aceleración Softtek(Java Backend)</b><br></br>
                       Java,SpringBoot (Oct 2023 -
                        Dic 2023)
                   </p>
